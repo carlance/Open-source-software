@@ -1,0 +1,5 @@
+    895 Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+    779 Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0; ; NCLIENT50_AAP98F1E6459A9) like Gecko
+    540 Mozilla/5.0 (MSIE 9.0; Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+    521 Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.95 Safari/537.36 OPR/15.0.1147.153
+    429 Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
