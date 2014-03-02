@@ -20,7 +20,7 @@ cat $ip_addr_get| sort -nr  > top10ip.txt # Sort top 10 ip addresses and save re
 grep ".pdf" $1> pdfraw1.tmp  #Grabs lines with the word .pdf
 cat pdfraw1.tmp | cut -f 2 -d '"' > pdfraw2.tmp #Cuts the second field split by " and saves to tmp file
 cat pdfraw2.tmp | cut -f 2 -d ' ' > pdfraw3.tmp #Takes previous file and cuts 2nd field split by space
-cat pdfraw3.tmp | uniq  -c > pdfraw4.tmp #Counts number of occurences of a line
+cat pdfraw3.tmp | uniq  -c > pdfraw4.tmp #Removes duplicates and adds number of same occurences
 cat pdfraw4.tmp | sort -nr | head > top10pdf.txt #Sort the top 10 pdf downloads from highest to lowest and save result to text file
 
 
@@ -28,7 +28,7 @@ cat pdfraw4.tmp | sort -nr | head > top10pdf.txt #Sort the top 10 pdf downloads 
 #List top 5 browsers 
 grep "GET" $1 > get_only.tmp #Grabs lines with the word GET
 cat get_only.tmp | cut -f 6 -d '"' > get_browsers.tmp #Cuts 6th field split by "
-cat get_browsers.tmp | uniq  -c > get_browsers_uniq.tmp #Counts number of occurences 
+cat get_browsers.tmp | uniq  -c > get_browsers_uniq.tmp #Removes duplicates and adds number of same occurences
 cat get_browsers_uniq.tmp | sort -nr | head -n 5 > top5browser.txt # Sort top 5 web browsers used and save result to text file
 
 
@@ -36,7 +36,7 @@ cat get_browsers_uniq.tmp | sort -nr | head -n 5 > top5browser.txt # Sort top 5 
 #List ipv6 visitors
 grep "::" $1 > $FILE  #Grabs lines with the characters ":"
 cut -d ' ' -f 1 $FILE |sort > ipv6raw1.tmp #Cuts first field split by space 
-cat ipv6raw1.tmp | uniq  -c > ipv6raw2.tmp # Count number of occurence
+cat ipv6raw1.tmp | uniq  -c > ipv6raw2.tmp # Removes duplicates and adds number of same occurences
 cat ipv6raw2.tmp | sort -nr > topipv6.txt #Save result to text file
  
 
